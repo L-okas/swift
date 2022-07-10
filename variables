@@ -1,0 +1,11 @@
+//Constant
+let length: Int = 120
+
+//Variable
+var width: Int = 120
+
+//Type Inference
+//No need to specify type, because compiler will understand what type
+//constant or variable it is
+let perimeter = 400 //Int
+var width2 = 400 //Int
