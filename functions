@@ -1,0 +1,50 @@
+////////THIS IS FUNCTION EXAMPLES////////
+
+
+// Creating function
+func greeting() {
+    print("Hello")
+}
+
+//calling a function 
+greeting()
+
+//function with parameters
+func greetingWithParameter(name: String) {
+    print("Hello \(name)")
+}
+
+//calling a function with parameter
+greetingWithParameter(name: "Thomas")
+
+func loveCalculator() {
+    let loveScore = Int.random(in: 1...100)
+    
+    if loveScore > 80 {
+        print("You love each other like Kanye loves Kanye")
+    } else if loveScore > 40 {
+        print("You go together like Coke and Mentos")
+    } else { 
+        print("You'll be forever alone")
+    }
+}
+
+//calling a function with conditionals
+loveCalculator()
+
+
+//function that takes another function as parameter (Int) -> Int
+func passedIntEqualsRandomNumber(yourNumber number: Int, randomNumber: () -> Int) -> Bool {
+    if number == randomNumber() {
+        return true
+    } else {
+        return false
+    }
+}
+
+func generateRandomNumber() -> Int {
+    return Int.random(in: 1...10)
+}
+
+//Calling a function that accepts functions as a parameter
+print(passedIntEqualsRandomNumber(yourNumber: 7, randomNumber: generateRandomNumber))
